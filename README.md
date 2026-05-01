@@ -143,16 +143,6 @@ Build an automated **Price Intelligence Dashboard** (Power BI + BigQuery pipelin
 
 ---
 
-## 📁 Project Deliverables
-
-| Deliverable | Description |
-|---|---|
-| `Car_Sales_Dashboard.pbix` | 5-page executive Power BI dashboard |
-| `Car_Sales_Dashboard.pdf` | PDF export of the Power BI dashboard |
-| `Bright_Motors_Strategic_Turnaround.pptx` | Investor-style PowerPoint presentation |
-| `car_sales_pipeline_flowchart.svg` | End-to-end SQL pipeline flowchart |
-| `Gantt_Chart_Car_Sales.png` | Project planning Gantt chart |
-
 ## Tools Used In Overall Case Study
 * SQL
 * Databricks
