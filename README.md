@@ -1,5 +1,4 @@
 # 🚗 Bright Motors Automotive Sales Intelligence
-
 ---
 
 ## Overview  
