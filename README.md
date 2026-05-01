@@ -1,5 +1,5 @@
 # 🚗 Bright Motors Automotive Sales Intelligence
-### USA & Canada Car Sales Analytics | Case Study README
+### USA & Canada Car Sales Analytics 
 
 ---
 
@@ -159,16 +159,3 @@ Build an automated **Price Intelligence Dashboard** (Power BI + BigQuery pipelin
 | `Gantt_Chart_Car_Sales.png` | Project planning Gantt chart |
 | `README.md` | This document — full case study documentation |
 
----
-
-## 👤 About the Analyst
-
-Data Analyst skilled in SQL, DAX, Power Query, Google BigQuery, PostgreSQL, and Databricks — with expertise spanning ETL/ELT pipelines, data warehousing, exploratory analysis, and feature engineering. Passionate about turning large-scale messy data into clear, actionable intelligence that drives commercial outcomes.
-
-📧 *[Your Email Here]*  
-🔗 *[Your LinkedIn Here]*  
-🌐 *[Your Portfolio Website Here]*
-
----
-
-*© 2026 Bright Motors Analytics Case Study | Built with SQL · BigQuery · Databricks · Power BI*
