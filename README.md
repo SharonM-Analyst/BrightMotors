@@ -87,7 +87,7 @@ Despite $7.61 billion in revenue and 558,811 transactions, the business recorded
 #### 6. Geographic Concentration in Florida, California & Texas
 - Florida leads all states in total sales volume and revenue, followed by California, Pennsylvania, and Texas
 - These states also show the highest above-market vs below-market pricing variance
-- Nova Scotia (Canada) shows significantly smaller volumes — indicating the market is overwhelmingly USA-driven
+- Nova Scotia (Canada) shows significantly smaller volumes indicating the market is overwhelmingly USA-driven
 
 #### 7. Deep Discount Sellers Are Destroying Portfolio Margins
 - Suppliers in the Deep Discount" margin tier (< -5%) are pulling down overall profitability
@@ -130,7 +130,7 @@ Build an automated Price Intelligence Dashboard (Power BI + BigQuery pipeline) t
 | **Phase 4** | Deploy state-level dynamic pricing benchmarks in Power BI | Week 4–6 | BI & Analytics Team |
 | **Phase 5** | Automate MMR monitoring alert system (BigQuery + Power Automate) | Week 6–10 | Data Engineering |
 | **Phase 6** | Expand premium/luxury segment listings by 15% | Week 8–12 | Business Development |
-| **Phase 7** | Quarterly KPI review — margin, revenue, supplier performance | Ongoing | Leadership & Analytics |
+| **Phase 7** | Quarterly KPI review: margin, revenue, supplier performance | Ongoing | Leadership & Analytics |
 
 Target Outcome: Recover $40–60M of the $88.3M loss within 12 months through pricing discipline, supplier optimisation, and inventory strategy realignment.
 
