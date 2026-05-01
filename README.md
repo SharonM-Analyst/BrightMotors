@@ -14,20 +14,20 @@ Despite generating **$7.61 billion in revenue** with 558,811 transactions and an
 ## Methodology: How the Case Study Was Done
 
 
-### Stage 1 — Data Ingestion & Setup
+### Data Ingestion & Setup
 - Sourced raw vehicle auction sales data in CSV format
 - Set up the project environment with Google BigQuery as the cloud data warehouse
 - Loaded and uploaded raw CSV files into BigQuery, defining schema and data types
 - Normalised delimiters, encoding formats, and validated row counts using SQL
 
-### Stage 2 — Data Inspection & Profiling
+### Data Inspection & Profiling
 - Performed row count and schema checks using `COUNT`, `COUNT DISTINCT`, and `INFORMATION_SCHEMA`
 - Audited for null and blank values across all critical fields
 - Computed numeric range statistics (`MIN`, `MAX`, `AVG`, `STDDEV`) to detect outliers
 - Identified and flagged duplicate records using `GROUP BY` and `HAVING COUNT > 1`
 - Applied a quality acceptance gate only proceeding when data quality passed defined thresholds
 
-### Stage 3 — Data Cleaning (SQL-based, CTE-driven)
+### Data Cleaning (SQL-based, CTE-driven)
 - Built a `raw_parsed_CTE` to standardise date formats and cast data types
 - Applied **string cleaning** using `CAST`, `TRIM`, and `INITCAP`
 - Performed **numeric validation** with `CASE WHEN` guards to handle invalid ranges
@@ -35,19 +35,19 @@ Despite generating **$7.61 billion in revenue** with 558,811 transactions and an
 - Produced a final `cleaned CTE` with quality flags (TRUE/FALSE) for downstream use
 - Output: **~550,000+ clean, validated records** ready for analysis
 
-### Stage 4 — Feature Engineering (CTEs built in BigQuery)
+### Feature Engineering (CTEs built in BigQuery)
 - **Price & Margin Features:** `profit_margin`, `market_value_gap`, `price_ratio`, `margin_tier`
 - **Vehicle Features:** `vehicle_age`, `age_bucket`, `mileage_bucket`, `body_type_clean`
 - **Time Buckets:** `sale_month`, `sale_quarter`, `sale_day_of_week`, `week_start`
 - **Seller & MMR Position Flags:** `above_mmr`, `below_mmr`, `mmr_position`, `seller_type_clean`
 
-### Stage 5 — Multi-Dimensional Analysis & KPI Computation
+### Multi-Dimensional Analysis & KPI Computation
 - **Pricing & Market Intelligence:** Avg margin (-0.66%), avg ratio (0.99), margin tier distributions
 - **Time & Seller Analysis:** Revenue and profit trends by month, quarter, and seller type
 - **Depreciation & Vehicle Lifecycle:** Revenue and pricing by vehicle age bucket (New → Older)
 - Built a **KPI Summary Dashboard View** in BigQuery feeding directly into Power BI
 
-### Stage 6 — Dashboard Development (Data Studio: https://datastudio.google.com/s/h8FqqfyM4Os  Loveable:https://sharonmbright.lovable.app )
+### Dashboard Development (Data Studio: https://datastudio.google.com/s/h8FqqfyM4Os  Loveable:https://sharonmbright.lovable.app )
 
 Built a **5-page executive Power BI dashboard** with dynamic slicers (Date, Location, Manufacturer, Body Design, Transmission, Color):
 
@@ -57,7 +57,7 @@ Built a **5-page executive Power BI dashboard** with dynamic slicers (Date, Loca
 4. **Supplier Performance** — Supplier leaderboard (14,261 suppliers), profit margin vs revenue, avg selling price by supplier
 5. **Geographic Trends** — Revenue & loss by state, pricing breakdown by state, margin tier distribution by state
 
-### Stage 7 — Presentation & Recommendations
+### Presentation & Recommendations
 - Produced an **investor-style PowerPoint presentation** (Bright Motors Strategic Turnaround)
 - Documented findings as actionable commercial insights
 - Built a complete **SVG pipeline flowchart** and **Gantt chart** to document the end-to-end methodology
