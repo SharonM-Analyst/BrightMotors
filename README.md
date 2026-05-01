@@ -1,5 +1,5 @@
 # 🚗 Bright Motors Automotive Sales Intelligence
----
+
 
 ## Overview  
 
@@ -95,7 +95,7 @@ Despite $7.61 billion in revenue and 558,811 transactions, the business recorded
 - Phelps Automotive and Financial Services command the highest average selling prices, suggesting a premium-tier opportunity
 
 
-## ✅ Recommendations
+## Recommendations
 
 ### 1. Implement a Minimum Pricing Floor Policy
 Set a minimum price ratio of 1.00 (at or above MMR/market value) as a mandatory seller requirement across all auction listings. Eliminating below-market pricing on the 50.4% underpriced inventory would directly recover margin losses.
@@ -118,7 +118,6 @@ Vehicles from premium suppliers (avg price >$100k) show stronger margin potentia
 ### 6. Automate Pricing Intelligence with Real-Time MMR Monitoring
 Build an automated Price Intelligence Dashboard (Power BI + BigQuery pipeline) that flags any listing priced more than 5% below market value before it goes live — preventing deep discounts before they occur rather than analysing them after.
 
----
 
 ## Implementation Plan
 
@@ -134,7 +133,6 @@ Build an automated Price Intelligence Dashboard (Power BI + BigQuery pipeline) t
 
 Target Outcome: Recover $40–60M of the $88.3M loss within 12 months through pricing discipline, supplier optimisation, and inventory strategy realignment.
 
----
 
 ## Tools Used In Overall Case Study
 * SQL
