@@ -11,10 +11,6 @@ The project was designed to simulate a real-world business intelligence engageme
 Despite generating **$7.61 billion in revenue** with 558,811 transactions and an average selling price of $13,611, Bright Motors recorded an overall **net loss of $88.3 million** indicating significant margin pressure driven by underpricing, inefficient seller practices, and poor inventory management.
 
 
-## 🛠️ Tools & Technologies Used
-
-
-
 ## Methodology: How the Case Study Was Done
 
 
