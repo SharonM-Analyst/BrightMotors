@@ -105,25 +105,25 @@ Despite $7.61 billion in revenue and 558,811 transactions, the business recorded
 ## ✅ Recommendations
 
 ### 1. Implement a Minimum Pricing Floor Policy
-Set a **minimum price ratio of 1.00** (at or above MMR market value) as a mandatory seller requirement across all auction listings. Eliminating below-market pricing on the 50.4% underpriced inventory would directly recover margin losses.
+Set a **minimum price ratio of 1.00** (at or above MMR/market value) as a mandatory seller requirement across all auction listings. Eliminating below-market pricing on the 50.4% underpriced inventory would directly recover margin losses.
 
 ### 2. Prioritise Nearly New Inventory (2–3 Year Vehicles)
 Shift acquisition strategy toward **2–3 year old vehicles**, which deliver the highest revenue and best price retention. Reduce exposure to vehicles older than 10 years, which generate minimal revenue per unit and compress portfolio margins.
 
 ### 3. Segment and Reward High-Performing Suppliers
 Introduce a **Supplier Tier Programme** based on profit margin performance:
-- **Platinum Tier:** Above-market pricing suppliers — provide preferred auction slots and incentives
-- **Standard Tier:** Near-market suppliers — maintain current terms
-- **Review Tier:** Deep-discount suppliers — require pricing compliance training or contract review
+- **Platinum Tier:** Above-market pricing suppliers: provide preferred auction slots and incentives
+- **Standard Tier:** Near-market suppliers: maintain current terms
+- **Review Tier:** Deep-discount suppliers: require pricing compliance training or contract review
 
 ### 4. Geographic Pricing Optimisation
-Apply **state-level dynamic pricing benchmarks** — particularly in Florida and California — where the largest above-market vs below-market gaps exist. Local market intelligence should inform reserve price setting by state.
+Apply **state-level dynamic pricing benchmarks** particularly in Florida and California, where the largest above-market vs below-market gaps exist. Local market intelligence should inform reserve price setting by state.
 
 ### 5. Expand Premium Segment Inventory
 Vehicles from premium suppliers (avg price >$100k) show stronger margin potential. Increasing the share of **luxury and premium brand listings** (BMW, Mercedes-Benz, Porsche Finance) would diversify and elevate the overall portfolio average selling price.
 
 ### 6. Automate Pricing Intelligence with Real-Time MMR Monitoring
-Build an automated **Price Intelligence Dashboard** (Power BI + BigQuery pipeline) that flags any listing priced more than 5% below MMR before it goes live — preventing deep discounts before they occur rather than analysing them after.
+Build an automated **Price Intelligence Dashboard** (Power BI + BigQuery pipeline) that flags any listing priced more than 5% below market value before it goes live — preventing deep discounts before they occur rather than analysing them after.
 
 ---
 
