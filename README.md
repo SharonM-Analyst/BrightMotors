@@ -1,5 +1,4 @@
 # 🚗 Bright Motors Automotive Sales Intelligence
-### USA & Canada Car Sales Analytics 
 
 ---
 
