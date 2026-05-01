@@ -53,7 +53,8 @@ Despite generating **$7.61 billion in revenue** with 558,811 transactions and an
 - **Depreciation & Vehicle Lifecycle:** Revenue and pricing by vehicle age bucket (New → Older)
 - Built a **KPI Summary Dashboard View** in BigQuery feeding directly into Power BI
 
-### Stage 6 — Dashboard Development (Power BI)
+### Stage 6 — Dashboard Development (Data Studio: https://datastudio.google.com/s/h8FqqfyM4Os  Loveable:https://sharonmbright.lovable.app )
+
 Built a **5-page executive Power BI dashboard** with dynamic slicers (Date, Location, Manufacturer, Body Design, Transmission, Color):
 
 1. **Executive Summary** — Total sales, revenue, profit/loss, avg price, profit & revenue trend, manufacturer contribution, geographic distribution
@@ -157,5 +158,14 @@ Build an automated **Price Intelligence Dashboard** (Power BI + BigQuery pipelin
 | `Bright_Motors_Strategic_Turnaround.pptx` | Investor-style PowerPoint presentation |
 | `car_sales_pipeline_flowchart.svg` | End-to-end SQL pipeline flowchart |
 | `Gantt_Chart_Car_Sales.png` | Project planning Gantt chart |
+
+## Tools Used In Overall Case Study
+* SQL
+* Databricks
+* NotebookLM
+* Power BI & Data Studio
+* Microsoft Excel
+* Mirrow & Canva_Planning & Presentation
+
 
 
