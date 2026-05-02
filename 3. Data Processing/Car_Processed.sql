@@ -377,6 +377,154 @@ SELECT
         ELSE 'Independent Dealer'
     END AS Supplier_type,
 
+
+
+CASE
+
+    /* =========================
+       RENTAL FLEET / DAILY RENTAL
+       ========================= */
+    WHEN LOWER(c.supplier) LIKE '%hertz%'
+      OR LOWER(c.supplier) LIKE '%avis%'
+      OR LOWER(c.supplier) LIKE '%budget%'
+      OR LOWER(c.supplier) LIKE '%enterprise veh exchange%'
+      OR LOWER(c.supplier) LIKE '%enterprise vehicle exchange%'
+      OR LOWER(c.supplier) LIKE '%enterprise holdings%'
+      OR LOWER(c.supplier) LIKE '%ars/enterprise%'
+      OR LOWER(c.supplier) LIKE '%u-haul%'
+      OR LOWER(c.supplier) LIKE '%dtg operations%'
+      OR LOWER(c.supplier) LIKE '%pv holding%'
+      OR LOWER(c.supplier) LIKE '%ez rent a car%'
+      OR LOWER(c.supplier) LIKE '%rent a car%'
+    THEN 'Rental Fleet'
+
+
+    /* =========================
+       BANK / FINANCE / LEASE
+       ========================= */
+    WHEN LOWER(c.supplier) LIKE '%ford motor credit%'
+      OR LOWER(c.supplier) LIKE '%toyota financial%'
+      OR LOWER(c.supplier) LIKE '%lexus financial%'
+      OR LOWER(c.supplier) LIKE '%hyundai motor finance%'
+      OR LOWER(c.supplier) LIKE '%kia motors finance%'
+      OR LOWER(c.supplier) LIKE '%gm financial%'
+      OR LOWER(c.supplier) LIKE '%gm remarketing%'
+      OR LOWER(c.supplier) LIKE '%mercedes-benz financial%'
+      OR LOWER(c.supplier) LIKE '%bmw mini financial%'
+      OR LOWER(c.supplier) LIKE '%alphera financial%'
+      OR LOWER(c.supplier) LIKE '%infiniti financial%'
+      OR LOWER(c.supplier) LIKE '%nissan motor acceptance%'
+      OR LOWER(c.supplier) LIKE '%nissan-infiniti%'
+      OR LOWER(c.supplier) LIKE '%nissan infiniti%'
+      OR LOWER(c.supplier) LIKE '%chrysler capital%'
+      OR LOWER(c.supplier) LIKE '%capital one%'
+      OR LOWER(c.supplier) LIKE '%wells fargo%'
+      OR LOWER(c.supplier) LIKE '%jpmorgan chase%'
+      OR LOWER(c.supplier) LIKE '%chase bank%'
+      OR LOWER(c.supplier) LIKE '%bank of america%'
+      OR LOWER(c.supplier) LIKE '%us bank%'
+      OR LOWER(c.supplier) LIKE '%suntrust%'
+      OR LOWER(c.supplier) LIKE '%fifth third%'
+      OR LOWER(c.supplier) LIKE '%tdaf%'
+      OR LOWER(c.supplier) LIKE '%td auto finance%'
+      OR LOWER(c.supplier) LIKE '%vw credit%'
+      OR LOWER(c.supplier) LIKE '%world omni%'
+      OR LOWER(c.supplier) LIKE '%ally%'
+      OR LOWER(c.supplier) LIKE '%santander%'
+      OR LOWER(c.supplier) LIKE '%westlake financial%'
+      OR LOWER(c.supplier) LIKE '%credit acceptance%'
+      OR LOWER(c.supplier) LIKE '%consumer portfolio%'
+      OR LOWER(c.supplier) LIKE '%regional acceptance%'
+      OR LOWER(c.supplier) LIKE '%exeter finance%'
+      OR LOWER(c.supplier) LIKE '%automobile acceptance%'
+      OR LOWER(c.supplier) LIKE '%prestige financial%'
+      OR LOWER(c.supplier) LIKE '%financial services%'
+      OR LOWER(c.supplier) LIKE '%lease trust%'
+      OR LOWER(c.supplier) LIKE '%lease%'
+    THEN 'Finance / Lease'
+
+
+    /* =========================
+       CORPORATE / COMMERCIAL FLEET
+       ========================= */
+    WHEN LOWER(c.supplier) LIKE '%ge fleet%'
+      OR LOWER(c.supplier) LIKE '%lease plan%'
+      OR LOWER(c.supplier) LIKE '%leaseplan%'
+      OR LOWER(c.supplier) LIKE '%ari%'
+      OR LOWER(c.supplier) LIKE '%wheels exchange%'
+      OR LOWER(c.supplier) LIKE '%donlen%'
+      OR LOWER(c.supplier) LIKE '%fleet lease%'
+      OR LOWER(c.supplier) LIKE '%fleet services%'
+    THEN 'Corporate Fleet'
+
+
+    /* =========================
+       OEM / MANUFACTURER
+       ========================= */
+    WHEN LOWER(c.supplier) LIKE '%ford-lincoln%'
+      OR LOWER(c.supplier) LIKE '%toyota motor sales%'
+      OR LOWER(c.supplier) LIKE '%nissan north america%'
+      OR LOWER(c.supplier) LIKE '%kia motors america%'
+      OR LOWER(c.supplier) LIKE '%subaru of america%'
+      OR LOWER(c.supplier) LIKE '%bmw north america%'
+      OR LOWER(c.supplier) LIKE '%volvo%'
+      OR LOWER(c.supplier) LIKE '%fca canada%'
+      OR LOWER(c.supplier) LIKE '%chrysler canada%'
+      OR LOWER(c.supplier) LIKE '%manufacturer%'
+      OR LOWER(c.supplier)LIKE '%motor sales%'
+    THEN 'Manufacturer / OEM'
+
+
+    /* =========================
+       WHOLESALE / AUCTION / REMARKETING
+       ========================= */
+    WHEN LOWER(c.supplier) LIKE '%remarketing%'
+      OR LOWER(c.supplier) LIKE '%wholesale%'
+      OR LOWER(c.supplier)LIKE '%auction%'
+      OR LOWER(c.supplier) LIKE '%high bid%'
+      OR LOWER(c.supplier) LIKE '%select lane%'
+      OR LOWER(c.supplier) LIKE '%exchange%'
+      OR LOWER(c.supplier) LIKE '%trading co%'
+      OR LOWER(c.supplier) LIKE '%asset recovery%'
+    THEN 'Wholesale / Auction'
+
+
+    /* =========================
+       RETAIL DEALERSHIP
+       ========================= */
+    WHEN LOWER(c.supplier) LIKE '%auto sales%'
+      OR LOWER(c.supplier) LIKE '%motors%'
+      OR LOWER(c.supplier) LIKE '%motorcars%'
+      OR LOWER(c.supplier) LIKE '%autoplex%'
+      OR LOWER(c.supplier) LIKE '%auto group%'
+      OR LOWER(c.supplier) LIKE '%autos%'
+      OR LOWER(c.supplier) LIKE '%hyundai%'
+      OR LOWER(c.supplier) LIKE '%honda%'
+      OR LOWER(c.supplier)LIKE '%chevrolet%'
+      OR LOWER(c.supplier) LIKE '%buick%'
+      OR LOWER(c.supplier) LIKE '%gmc%'
+      OR LOWER(c.supplier) LIKE '%mazda%'
+      OR LOWER(c.supplier) LIKE '%brokers%'
+      OR LOWER(c.supplier) LIKE '%superstore%'
+      OR LOWER(c.supplier) LIKE '%direct auto%'
+    THEN 'Retail Dealer'
+
+
+    /* =========================
+       NON-PROFIT / OTHER
+       ========================= */
+    WHEN LOWER(c.supplier) LIKE '%purple heart%'
+    THEN 'Non-Profit / Charity'
+
+    WHEN c.supplier IS NULL OR TRIM(c.supplier) = '' OR c.supplier = 'Unknown'
+    THEN 'Unknown'
+
+    ELSE 'Independent Dealer'
+
+END AS supplier_segment,
+
+
+
     -- ── Vehicle Age ───────────────────────────────────────────────────────────
     c.Model_Year,
     2015 - c.Model_Year AS vehicle_age,
@@ -396,8 +544,7 @@ SELECT
     ROUND(AVG(c.Selling_Price), 2)                                 AS avg_selling_price,
     percentile_approx(c.Selling_Price, 0.5)                        AS median_selling_price,
 
-    -- ── Market Value ─────────────────────────────────────────────────────────
-    c.Market_Value,
+    -- ── Market Value ────────────────────────────────────────────────────────
     coalesce(c.market_value,0)                                      AS Market_value2,
 
   CASE
@@ -411,8 +558,7 @@ END AS market_position,
 
     -- ── Mileage ───────────────────────────────────────────────────────────────
     c.Mileage,
-    coalesce(c.mileage,0)                           AS Mileage2,
-
+    
     CASE
         WHEN coalesce(c.mileage,0)  < 5000                             THEN 'New / Delivery'
         WHEN coalesce(c.mileage,0)   BETWEEN 5000     AND  20000       THEN 'Very Low'
@@ -426,7 +572,6 @@ END AS market_position,
     END AS Mileage_condition,
 
     -- ── Condition ─────────────────────────────────────────────────────────────
-    c.Condition_Score,
     coalesce(c.Condition_Score,0)                           AS condition_sore2,
 
 
@@ -446,7 +591,7 @@ END AS market_position,
     2)                                                              AS profit_margin_pct,
 
     CASE
-        WHEN c.Market_Value IS NULL OR c.Market_Value = 0                                          THEN 'Unknown'
+        WHEN c.Market_Value IS NULL OR c.Market_Value = 0                                                                        THEN 'Unknown'
         WHEN ((c.Selling_Price - coalesce(c.market_value,0)   ) / coalesce(c.market_value,0)   ) * 100 >= 10                     THEN 'Premium (≥10%)'
         WHEN ((c.Selling_Price - coalesce(c.market_value,0)   ) / coalesce(c.market_value,0)   ) * 100 >= 5                      THEN 'Above Market (5% to 9.99%)'
         WHEN ((c.Selling_Price - coalesce(c.market_value,0)   ) / coalesce(c.market_value,0)   ) * 100 >= 0                      THEN 'Near Market (0% to 4.99%)'
@@ -466,11 +611,7 @@ END AS market_position,
     -- ── Date & Time Dimensions ────────────────────────────────────────────────
     
     DATE(c.Sale_Date)                                               AS sale_date,
-
-    -- BigQuery: FORMAT_DATE('%A', date) → Databricks: date_format(date, 'EEEE')
     date_format(c.Sale_Date, 'EEEE')                                AS day_of_week,
-
-    -- BigQuery: FORMAT_DATETIME('%H:%M:%S', ts) → Databricks: date_format(ts, 'HH:mm:ss')
     date_format(c.Sale_Date, 'HH:mm:ss')                            AS transaction_time,
 
     CASE
@@ -480,18 +621,16 @@ END AS market_position,
         ELSE 'Night'
     END AS time_group,
 
-    -- BigQuery: EXTRACT(DAYOFWEEK FROM date) → Databricks: dayofweek(date)
-    -- Spark dayofweek(): 1 = Sunday … 7 = Saturday  (same convention as BigQuery)
+   
     CASE
         WHEN dayofweek(DATE(c.Sale_Date)) IN (6, 7) THEN 'Weekend'
         ELSE 'Weekday'
     END AS day_category,
 
-    -- BigQuery: FORMAT_DATE('%B', date) → Databricks: date_format(date, 'MMMM')
+    
     date_format(c.Sale_Date, 'MMMM')                                AS month_name,
     COALESCE( date_format(c.Sale_Date, 'MMMM'),'Unknown')           AS month_name2,
 
-    -- BigQuery: EXTRACT(DAY FROM date) → Databricks: dayofmonth(date)
     CASE
         WHEN dayofmonth(DATE(c.Sale_Date)) BETWEEN 1  AND 10 THEN 'Beginning of Month'
         WHEN dayofmonth(DATE(c.Sale_Date)) BETWEEN 11 AND 20 THEN 'Mid of Month'
@@ -499,6 +638,4 @@ END AS market_position,
     END AS month_pattern
 
 FROM carsales c
-
--- ── GROUP BY — explicit list (Databricks does not support GROUP BY ALL) ────────
 GROUP BY ALL;
